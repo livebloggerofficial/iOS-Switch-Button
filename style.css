@@ -1,0 +1,67 @@
+.switch-container div {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.switch-container .icon {
+  width: 20px;
+  display: flex;
+}
+
+.container {
+  max-width: 360px;
+  border: 1px solid #ddd;
+  padding: 4px 16px;
+  border-radius: 10px;
+  margin: 32px auto;
+}
+
+.switch-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  margin: 8px 0;
+}
+
+.switch {
+  width: 60px;
+  height: 34px;
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+}
+
+.switch .slider {
+  position: absolute;
+  inset: 0;
+  background: #ccc;
+  border-radius: 34px;
+  transition: all 400ms ease;
+}
+
+.switch input {
+  display: none;
+}
+
+.switch .slider::before {
+  content: "";
+  position: absolute;
+  height: 26px;
+  width: 26px;
+  border-radius: 50%;
+  left: 4px;
+  bottom: 4px;
+  background: #fff;
+  transition: all 400ms ease;
+}
+
+.switch input:checked + .slider {
+  background: #34c759;
+}
+
+.switch input:checked + .slider::before {
+  transform: translateX(26px);
+}
